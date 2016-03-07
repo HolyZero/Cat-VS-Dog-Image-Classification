@@ -1,11 +1,11 @@
 ### 
 ### Be sure to address
 - Value added by features  
-- Value added by models
+- Value added by models  
 **Note**: Make sure that you are combining different feature sets and classifiers, and also the comparisons make sense (So that you know what works)
 
 ### Organizing the GitHub folders
-#### train.r &
+#### train.r
 - Baseline
 - Yours
 
@@ -14,7 +14,7 @@
 - input "model" object from train.r
 - output predicted labels  
   
-## Eval
+## Evaluation
 - new set of 2000 images
 - each team will have 30 minutes to process them into features chosen
 - submit processed features as a folder of feature objects file. featured shoule be readable by train.r test.r.
