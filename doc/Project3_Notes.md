@@ -1,9 +1,11 @@
-### 
+# March9  
+remember to download and load packages
 ### Be sure to address
 - Value added by features  
 - Value added by models  
 **Note**: Make sure that you are combining different feature sets and classifiers, and also the comparisons make sense (So that you know what works)
 
+# March 2
 ### Organizing the GitHub folders
 #### train.r
 - Baseline
