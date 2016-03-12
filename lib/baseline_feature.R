@@ -1,8 +1,8 @@
 rm(list=ls())
 
 setwd("/Users/Bianbian/GitHub/cycle3cvd-team-6/data/images")
+library(EBImage)
 library(grDevices)
-library(e1071)
 library(caret)
 ### Extract HSV
 extract.features <- function(img){
