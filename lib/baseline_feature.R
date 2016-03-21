@@ -31,10 +31,11 @@ X <- array(rep(0,obs*360),dim=c(obs,360))
 for (i in 1:obs){
   tryCatch({
     img <- readImage(paste0(labels$V1[i],".jpg"))
-  }, error =function(err){count=count+1},
+  }, error =function(err){print(i)},
   finally = {X[i,] <- extract.features(img)})
 }
 data_hsv<-as.data.frame(cbind(labels[,3],X))
+data_hsv<-unique(data_hsv)
 data_hsv$V1<-as.factor(data_hsv$V1)
 
 ### Split to two sets
@@ -43,9 +44,3 @@ train<-data_hsv[inTrain,]
 test<-data_hsv[-inTrain,]
 save(train,file="train_data.RDS")
 save(test,file="test_data.RDS")
-
-
-
-
-
-
