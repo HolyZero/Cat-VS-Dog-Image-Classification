@@ -112,13 +112,16 @@ end = time.time()
 print("minutes spent in Extracting vocabulary")
 print((end - start)/60)
 
-clf=sklearn.svm.classes.LinearSVC()
+# clf=sklearn.svm.classes.LinearSVC()
 # clf = LinearSVC()
-clf.fit(traindata, numpy.array(image_classes_train))
-joblib.dump((voc,clf), "imagereco.pkl", compress=3)
+# clf.fit(traindata, numpy.array(image_classes_train))
+#joblib.dump((voc,clf), "imagereco.pkl", compress=3)
+
+joblib.dump((voc), "/Users/JPC/Documents/Columbia/2nd Semester/1. Applied Data Science/2. Homeworks/Project 3/cycle3cvd-team-6/data/imagereco.pkl", compress=3)
+
 
 # model=train(descriptors,image_classes_train,image_paths)
-voc, clf = joblib.load("imagereco.pkl")
+voc= joblib.load("imagereco.pkl")
 
 
 X=numpy.matrix(traindata)
