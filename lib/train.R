@@ -25,7 +25,7 @@ train <- function(features,labels){
   training.base <- data.frame(label=labels,features.base)
   training.adv <- data.frame(label=labels,features.adv)
   base.model <- svm(label~., data = training.base,  kernel="linear",scale=F)
-  adv.model <- svm(label~., data = training.adv, type = "C", kernel = "sigmoid")
+  adv.model <- svm(label~., data = training.adv, type = "C", kernel = "radial")
   return(list(baseline=base.model,adv=adv.model))
 }
 
