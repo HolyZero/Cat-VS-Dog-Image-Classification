@@ -55,7 +55,7 @@ for (i in 1:length(image_names)){
   finally = {X[i,] <- extract.features(img)})
 }
 # data_hsv<-as.data.frame(cbind(labels[,3],X))
-data_hsv<-unique(data_hsv)
+# data_hsv<-unique(data_hsv)
 # save(data_hsv,file="beseline feature.RData")
 # data_hsv$V1<-as.factor(data_hsv$V1)
 
@@ -67,9 +67,9 @@ names(data_hsv) <- paste0("base",seq(1:ncol(data_hsv)))
 names(data_hsv)
 
 #   load("/Users/JPC/Documents/Columbia/2nd Semester/1. Applied Data Science/2. Homeworks/Project 3/cycle3cvd-team-6/data/baseline feature.RData")
-new_features <- read.csv("/Users/JPC/Documents/Columbia/2nd Semester/1. Applied Data Science/2. Homeworks/Project 3/cycle3cvd-team-6/data/new features model selection.csv", header=F)
+new_features <- read.csv("/Users/JPC/Documents/Columbia/2nd Semester/1. Applied Data Science/2. Homeworks/Project 3/cycle3cvd-team-6/data/new_features.csv", header=F)
 names(new_features) <- paste0("new",seq(1:ncol(new_features)))
 names(new_features)
 
 feature_eval <- cbind(data_hsv,new_features)
-save(feature_eval,"lib/feature_eval.RData")
+save(feature_eval,file = "output/feature_eval.RData")
