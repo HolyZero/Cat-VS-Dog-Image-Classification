@@ -43,7 +43,7 @@ extract.features <- function(img){
 
 image_names <- list.files(dir_images)
 # corrupt <- c(-4, -6, -8, -140, -152, -2237, -2246, -2247, -2253, -2265, -2274, -2283, -2293, -2299, -6903, -6909)
-image_names <- image_names[corrupt]
+# image_names <- image_names[corrupt]
 # labels <- read.csv("/Users/yueyingteng/Downloads/labels.csv",stringsAsFactors = F)
 # obs<-dim(labels)[1]
 X <- array(rep(0,length(image_names)*360),dim=c(length(image_names),360))
@@ -54,6 +54,7 @@ for (i in 1:length(image_names)){
   error =function(err){print(i)},
   finally = {X[i,] <- extract.features(img)})
 }
+data_hsv<-as.data.frame(X)
 # data_hsv<-as.data.frame(cbind(labels[,3],X))
 # data_hsv<-unique(data_hsv)
 # save(data_hsv,file="beseline feature.RData")
