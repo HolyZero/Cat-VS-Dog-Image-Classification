@@ -14,6 +14,14 @@ os.chdir('/Users/JPC/Documents/Python')
 folderPath='/Users/JPC/Documents/Columbia/2nd Semester/1. Applied Data Science/2. Homeworks/Project 3/images'
 image_names = os.listdir(folderPath)
 image_names = image_names[2:len(image_names)+1]
+
+# corrupt=numpy.array([140, 152, 2237, 2246, 2247, 2253, 2265, 2274, 2283, 2293, 2299, 6903, 6909]+[4,6,8])
+# corrupt=numpy.array(corrupt)-numpy.array([1]*len(corrupt))
+# index=set(range(len(image_names)))
+# index=index.difference(corrupt)
+# image_names=[image_names[i] for i in index]
+
+image_paths = [os.path.join(folderPath, f) for f in image_names]
 feature_det = cv2.xfeatures2d.SIFT_create()
 
 def getImagedata(feature_det,bow_extract,path):
