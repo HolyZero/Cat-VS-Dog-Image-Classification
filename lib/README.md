@@ -1,5 +1,12 @@
-# Project: American Community Survey
-### Code lib Folder
+Project: Cats vs Dogs
 
-The lib directory contains various files with function definitions (but only function definitions - no code that actually runs).
+Team members: Juan Pablo Campos Gutierrez, Jingying Zhou, Rong Wang, Yueying Teng, Ziyue Jin
 
+Summary: In this project, we developed a new method for feature 
+
+[Contribution Statement] 
+Juan Pablo Campos Gutierrez:
+Jingying Zhou: 
+Rong Wang: 
+Yueying Teng:
+Ziyue Jin:
