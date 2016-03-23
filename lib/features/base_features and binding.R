@@ -42,9 +42,10 @@ extract.features <- function(img){
 
 ## read image
 
-image_names <- list.files(dir_images)
+##image_names <- list.files(dir_images)
 ##corrupt <- c(-4, -6, -8, -140, -152, -2237, -2246, -2247, -2253, -2265, -2274, -2283, -2293, -2299, -6903, -6909)
-##image_names <- image_names[corrupt]
+image_names <- image_names[corrupt]
+names<-as.data.frame(image_names) 
 # labels <- read.csv("/Users/yueyingteng/Downloads/labels.csv",stringsAsFactors = F)
 # obs<-dim(labels)[1]
 X <- array(rep(0,length(image_names)*360),dim=c(length(image_names),360))
@@ -61,7 +62,7 @@ data_hsv<-as.data.frame(X)
 save(data_hsv,file="beseline feature.RData")
 # data_hsv$V1<-as.factor(data_hsv$V1)
 
-
+# load("/Users/yueyingteng/Downloads/cycle3cvd-team-6/output/feature_eval.RData")
 
 
 # Data base for in class cross validation
@@ -73,5 +74,5 @@ new_features <- read.csv("/Users/yueyingteng/Downloads/cycle3cvd-team-6/data/new
 names(new_features) <- paste0("new",seq(1:ncol(new_features)))
 names(new_features)
 
-feature_eval <- cbind(data_hsv,new_features)
-save(feature_eval,file = "output/feature_eval.RData")
+feature_eval <- cbind(names,feature_eval)
+save(feature_eval,file = "/Users/yueyingteng/Downloads/cycle3cvd-team-6/output/feature_eval.RData")
