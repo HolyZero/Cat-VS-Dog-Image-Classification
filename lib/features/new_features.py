@@ -26,10 +26,6 @@ flann_params = dict(algorithm = 1, trees = 5)
 matcher = cv2.FlannBasedMatcher(flann_params, {})
 # bow_extract  =cv2.BOWImgDescriptorExtractor(descr_ext,matcher)
 bow_extract  =cv2.BOWImgDescriptorExtractor(feature_det,matcher)
-bow_train = cv2.BOWKMeansTrainer(500)
-for des in descriptors:
-    bow_train.add(des)
-
 voc = joblib.load("/Users/JPC/Documents/Columbia/2nd Semester/1. Applied Data Science/2. Homeworks/Project 3/cycle3cvd-team-6/data/imagereco.pkl")
 bow_extract.setVocabulary( voc )
 
