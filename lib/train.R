@@ -22,8 +22,8 @@ train <- function(features,labels){
   names.adv <- subset(names(features),substr(names(features),1,1)=="n")
   features.base <- features[,names.base]
   features.adv <- features[,names.adv]
-  training.base <- data.frame(label=labels,features.base)
-  training.adv <- data.frame(label=labels,features.adv)
+  training.base <- data.frame(label=as.factor(labels),features.base)
+  training.adv <- data.frame(label=as.factor(labels),features.adv)
   base.model <- svm(label~., data = training.base,  kernel="linear",scale=F)
   adv.model <- svm(label~., data = training.adv, type = "C", kernel = "radial")
   return(list(baseline=base.model,adv=adv.model))
