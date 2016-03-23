@@ -3,7 +3,7 @@ Project: Cats vs Dogs
 Team members: Juan Pablo Campos Gutierrez, Jingying Zhou, Rong Wang, Yueying Teng, Ziyue Jin
 
 
-Summary: The team developed  two models to classify images of dogs and cats. First, a baseline model based on color histograms and Linear Support Vector Machines was implemented.Then, advanced models were fitted to improve the accuracy and the best was selected. The final model is a NAME_Classifier based on Bag of Words, which achieves an accuracy of XX%.
+Summary: The team developed  two models to classify images of dogs and cats. First, a baseline model based on color histograms and Linear Support Vector Machines was implemented.Then, advanced models were fitted to improve the accuracy and the best was selected. The final model is a svm with redial kernel based on Bag of Words, which achieves an accuracy of 77.8%.
 
 
 [Contribution Statement]
